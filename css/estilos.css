@@ -1,0 +1,271 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* HEADER */
+
+header{
+    height: 100px;
+    background: #fde08f;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    text-transform: uppercase;
+    color: #200120;
+    font-weight: 200;
+}
+.menu a{
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: 0.4s;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+#check{
+    display: none;
+}
+
+.menu a:hover,
+.mostrar-menu:hover:hover,
+.esconder-menu:hover{
+    color: #410041;
+}
+
+
+/* BANNER */
+#banner img{
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+}
+
+#banner::before{
+    content: '';
+    background: rgba(248, 37, 195, 0.247);
+    position: absolute;
+    width: 100%;
+    height: 55vh;
+    left: 0;
+}
+
+.contenido-banner{
+    position: absolute;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3{
+    position: relative;
+    bottom: 85%;
+    left: 10%;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.contenido-banner p{
+    position: relative;
+    bottom: 80%;
+    left: 10%;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+
+.boton-empezar{
+    position: relative;
+    bottom: 73%;
+    left: 10%;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #75bb04;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+
+.boton-empezar:hover{
+    background: #4c7a02;
+}
+
+/* PADRES */
+
+#padres{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#padres img{
+    width: 80%;
+    height: 40%;
+    border-radius: 60%;
+    background-size: cover;
+    border: 2.8px solid #75bb04;
+}
+
+#padres .tarjeta{
+    height: 50%;
+    margin: 20px;
+    border: 1.8px solid #200120;
+    border-radius: 10px;
+}
+
+#padres div{
+    padding: 10px 10px;
+}
+
+#padres div h4{
+    color: #410041;
+    font-size: 28px;
+    margin: 15px 0px;
+}
+
+#padres div p{
+    color: #200120;
+    font-size: 18px;
+    text-align: start;
+}
+
+/* ICONOS */
+
+.icon-truck{
+    font-size: 55px;
+}
+.icon-happy2{
+    font-size: 55px;
+}
+.icon-mobile{
+    font-size: 55px;
+}
+
+#iconos{
+    padding: 0px 50px;
+    background: rgba(77, 77, 92, 0.6);
+}
+
+.contenido-iconos{
+    padding: 50px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contenido-iconos div{
+    flex: 1;
+    margin: 20px 0px;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#icon-mobile{
+    border: none;
+}
+
+.contenido-iconos div i{
+    color: #ff4dc4;
+}
+
+.contenido-iconos div h6{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px 0;
+}
+
+.contenido-iconos div p{
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 15px;
+}
+
+/* FOOTER */
+footer{
+    background: #4d4d5c;
+    color: #cccccc4a;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media(max-width: 768px){
+    /* HEADER */
+
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fde08f;
+        right: -100%;
+        top: 0px;
+        text-align: center;
+        padding: 100px 0px ;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    
+    #check:checked ~ .menu{
+        right: 0px;
+    }
+    /* BANNER */
+    .contenido-banner h3{
+        width: 300px;
+    }
+
+    /*PADRES*/
+    #padres{
+        position: relative;
+        flex-direction: column;
+    }
+
+    /* ICONOS */
+
+    .contenido-iconos{
+        flex-direction: column;
+    }
+
+    .contenido-iconos div{
+        border: none;
+    }
+}
